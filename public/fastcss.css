@@ -1,0 +1,33 @@
+/* Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fafafa;
+}
+.Main-title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  letter-spacing: 2.2px;
+  margin-bottom: 3rem;
+}
+.box-propag {
+  width: 10rem;
+  height: 10rem;
+  background-color: gray;
+  margin: 0 auto;
+  text-align: center;
+}
+.button {
+  background: black;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+.res-box {
+  border: 3px solid cyan;
+  margin-top: 1rem;
+}

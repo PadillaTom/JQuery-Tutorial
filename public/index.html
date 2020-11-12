@@ -5,19 +5,51 @@
     <title>JQuery Tut</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="./fastcss.css" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <h1 class="Main-title">Jquery Tutorial</h1>
     <!-- FadeOut -->
-    <div class="box"></div>
+    <!-- <div class="box"></div> -->
+
     <!-- Click Events -->
-    <div class="cta-bg">
+    <!-- <div class="cta-bg">
       <p>Click Event: BG to RED</p>
     </div>
+    <div class="cta-box">
+      <a href="top.html">TOP</a>
+      <a href="bot.html">BOT</a>
+    </div> -->
+
     <!-- Multiple Events -->
-    <div class="cta-bg2">
+    <!-- <div class="cta-bg2">
       <p>Multiple Events</p>
+    </div> -->
+
+    <!-- Propagation -->
+    <!-- <div class="box-propag">
+      <div class="button">Stop Propagation</div>
+      <p>Change BG Color</p>
+    </div>
+    <div class="box-propag res-box">
+      <p>Results of Propag Box</p>
+    </div> -->
+
+    <!-- Form -->
+    <div class="form-container">
+      <form class="main-form">
+        <select name="state" class="select-options">
+          <option value="NY">New York</option>
+          <option value="FL">Florida</option>
+          <option value="TX">Texas</option>
+        </select>
+        <input type="text" class="input-1" name="myname" />
+      </form>
+      <h2>
+        My name is:
+        <div class="result-phrase"></div>
+      </h2>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

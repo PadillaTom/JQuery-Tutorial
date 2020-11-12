@@ -44,27 +44,70 @@ $(function () {
 
   // ---> EVENTS HANDLER:
 
-  //   Click:
+  //   ------> Click:
+  //
   //   $('.cta-bg').on('click', function () {
   //     $('body').css({ background: 'red' });
   //   });
 
-  //   For DYNAMIC ELEMENTS not yet in DOM: ---> Good for React.
+  //   ------>  For DYNAMIC ELEMENTS not yet in DOM: ---> Good for React.
+  //
   //   Will search for "cta-bg" on DOM before execute function.
-  $(document).on('click', '.cta-bg', function () {
-    $('body').css({ background: 'red' });
-  });
+  // $(document).on('click', '.cta-bg', function () {
+  //   $('body').css({ background: 'red' });
+  // });
 
-  //   Multiple stuff, We pass in an Object:
-  $('.cta-bg2').on({
-    click: function () {
-      $('body').css({ background: 'gray' });
-    },
-    mouseenter: function () {
-      $('.cta-bg2 p').css({ color: 'green' });
-    },
-    mouseleave: function () {
-      $('.cta-bg2 p').css({ fontSize: '3rem' });
-    },
-  });
+  //   -----> Multiple stuff, We pass in an Object:
+  //
+  // $('.cta-bg2').on({
+  //   click: function () {
+  //     $('body').css({ background: 'gray' });
+  //   },
+  //   mouseenter: function () {
+  //     $('.cta-bg2 p').css({ color: 'green' });
+  //   },
+  //   mouseleave: function () {
+  //     $('.cta-bg2 p').css({ fontSize: '3rem' });
+  //   },
+  // });
+
+  //  -----> More Events:
+  //
+  // Prevent Default ::::::
+  //   $('.cta-box a').on('click', function (event) {
+  //     event.preventDefault();
+  //   });
+  //
+  // Stop Propagation :::::: --> Do not have samae properties as PARENTS
+  // $('.box-propag').on('click', function () {
+  //   $('.res-box').css({ background: 'red' });
+  // });
+  // $('.button').on('click', function (e) {
+  //   e.stopPropagation(); // -> Evita pasar propiedades de PARENT a CHILD
+  //   // console.log(e.target.nodeName); // -> Nos muestra el Elemento Clickeado : DIV
+  //   $('.res-box').css({ background: 'blue' });
+  //   if (e.target.nodeName == 'DIV') {
+  //     $('.res-box').css({ background: 'purple' });
+  //   } else {
+  //     $('.res-box').css({ background: 'orange' });
+  //   }
+  // });
+  //
+  //  Form Events ::::::  -->
+  // $('.select-options').change(function (e) {
+  //   alert(`Change value to: ${e.target.value}`);
+  // });
+  // $('.input-1').change(function (e) {
+  //   alert(`name is ${e.target.value}`);
+  // });
+  $('.input-1')
+    .change(function (e) {
+      $('.result-phrase').html('<h4>' + e.target.value + '.</h4>');
+    })
+    .focusin(function () {
+      $('.result-phrase').css({ color: 'red' });
+    })
+    .focusout(function () {
+      $('.result-phrase').css({ color: 'cyan' });
+    });
 });
