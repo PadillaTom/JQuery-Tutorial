@@ -14,7 +14,9 @@ body {
   letter-spacing: 2.2px;
   margin-bottom: 3rem;
 }
-.box-propag {
+
+/* EVENTS */
+/* .box-propag {
   width: 10rem;
   height: 10rem;
   background-color: gray;
@@ -30,4 +32,72 @@ body {
 .res-box {
   border: 3px solid cyan;
   margin-top: 1rem;
+} */
+
+/* DOM MANIPULATION */
+.container {
+  display: flex;
+}
+.boxes-container {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8 {
+  padding: 0.5rem 2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.results-container {
+  height: 15rem;
+  width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border: 5px solid black;
+}
+
+/* Results */
+.result-box {
+  width: 100%;
+  height: 100%;
+}
+.active {
+  background-color: red;
+}
+.replaced {
+  background-color: darkgreen;
+}
+
+/* Get Att */
+.get-att {
+  width: 10rem;
+  border: 3px solid black;
+}
+.get-att img {
+  width: 100%;
+  object-fit: cover;
+}
+.get-att input {
+  width: 100%;
+}
+.changed-alt {
+  transform: scale(2);
 }
