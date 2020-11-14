@@ -7,6 +7,10 @@
 body {
   background: #fafafa;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 .Main-title {
   text-align: center;
   padding: 1rem;
@@ -35,7 +39,7 @@ body {
 } */
 
 /* DOM MANIPULATION */
-.container {
+/* .container {
   display: flex;
 }
 .boxes-container {
@@ -61,7 +65,6 @@ body {
   cursor: pointer;
   margin: 0.5rem;
 }
-
 .results-container {
   height: 15rem;
   width: 20rem;
@@ -72,10 +75,10 @@ body {
   align-items: center;
   text-align: center;
   border: 5px solid black;
-}
+}*/
 
 /* Results */
-.result-box {
+/* .result-box {
   width: 100%;
   height: 100%;
 }
@@ -84,10 +87,10 @@ body {
 }
 .replaced {
   background-color: darkgreen;
-}
+} */
 
 /* Get Att */
-.get-att {
+/* .get-att {
   width: 10rem;
   border: 3px solid black;
 }
@@ -100,4 +103,44 @@ body {
 }
 .changed-alt {
   transform: scale(2);
+}  */
+
+/* AJAX */
+/* 
+.title-ajax {
+  color: red;
+  text-align: center;
+} */
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::P O K E D E X:::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+
+.main-container {
+  background: #790518;
+  width: 100vw;
+  height: 100vh;
+}
+.pokedex-center {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Pokedex itself */
+.pokedex-container {
+  height: 35rem;
+  width: 30rem;
+  border: 1px solid #dedede;
+  background: #dc0a2d;
+}
+.screen {
+  border: 1px solid #dedede;
+  width: 50%;
+  margin: 0 auto;
+  height: 20rem;
 }

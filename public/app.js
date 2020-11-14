@@ -113,102 +113,179 @@
 // });
 
 // :::::::::::::::::::: DOM MANIPULATION :::::::::::::::::::::::
-$(function main() {
-  // ---> ADD / REMOVE Classes:
-  //   $('.result-box').addClass('active');
-  //   $('.result-box').removeClass('active');
+// $(function main() {
+//   // ---> ADD / REMOVE Classes:
+//   //   $('.result-box').addClass('active');
+//   //   $('.result-box').removeClass('active');
 
-  $('.box1').on('click', function () {
-    $('.result-box').addClass('active');
-  });
-  $('.box2').on('click', function () {
-    $('.result-box').removeClass('active');
-  });
+//   $('.box1').on('click', function () {
+//     $('.result-box').addClass('active');
+//   });
+//   $('.box2').on('click', function () {
+//     $('.result-box').removeClass('active');
+//   });
 
-  //   ---> TOGGLE Classes:
-  $('.box3').on('click', function () {
-    $('.result-box').toggleClass('active');
-  });
+//   //   ---> TOGGLE Classes:
+//   $('.box3').on('click', function () {
+//     $('.result-box').toggleClass('active');
+//   });
 
-  //  ---> CLONE STUFF:
-  //   Agarra todos los elementos con la same CLASS!
-  //   $('.box4').on('click', function () {
-  //     $('.results-container').clone().appendTo('body');
-  //   });
+//  ---> CLONE STUFF:
+//   Agarra todos los elementos con la same CLASS!
+//   $('.box4').on('click', function () {
+//     $('.results-container').clone().appendTo('body');
+//   });
 
-  //   $('.box4').on('click', function () {
-  //     $('.results-container:first').clone().appendTo('body');
-  //   });
+//   $('.box4').on('click', function () {
+//     $('.results-container:first').clone().appendTo('body');
+//   });
 
-  //  ---> WRAP: Wrap, unWrap, WrapInner
-  //   $('.box5').on('click', function () {
-  //     $('.box1').wrap(`<div class="active"> </div>`);
-  //   });
-  //   $('.box6').on('click', function () {
-  //     $('.box1').unwrap(`.active`);
-  //   });
+//  ---> WRAP: Wrap, unWrap, WrapInner
+//   $('.box5').on('click', function () {
+//     $('.box1').wrap(`<div class="active"> </div>`);
+//   });
+//   $('.box6').on('click', function () {
+//     $('.box1').unwrap(`.active`);
+//   });
 
-  // ---> CHANGING ELEMENTS: Append, AppendTo, html, prepend
+// ---> CHANGING ELEMENTS: Append, AppendTo, html, prepend
 
-  //   $('.box7').on('click', function () {
-  //  APPEND:
-  // $('.result-box').append(`<p>HELLO</p>`);
-  // $(`<p>HELLO</p>`).appendTo('.result-box');
-  //
-  // HTML:
-  // console.log($('.box1').html());
-  // $('.box1').html(`<div class="active">Hello World</div>`);
-  //
-  // Text(): "Element: First, Last"
-  // console.log($('p:first').text());
-  // $('p:first').text(`New TEXT`);
-  //
-  // BEFORE, AFTER: Inster, After, InsterBefore, InsetAfter
-  //
-  // REMOVE: Select by Class, or by element and className
-  // $('.box1').remove();
-  // $('div').remove('.box3');
-  //
-  // REPLACE: All, With.
-  // $('.box1').replaceWith(`<p>Replaced</p>`);
-  //
-  // ATTRIBUTES : IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  // *** ATTR, REMOVEATTR, VAL ***
-  // Get ATT:
-  // console.log($('.get-att img').attr('alt'));
-  //
-  // Change ATT:
-  // $('.get-att img').attr({ alt: 'New Alt', class: 'changed-alt' });
-  //
-  // **** VALUE: Get Values form Input Fields! *****
-  // console.log($('.get-att input').val());
-  //
-  // STYLE Properties: Width, InnerWidth, Height, CSS
-  //     console.log($('.box1').width());
-  //     if ($('.box1').width() > 70) {
-  //       $('.result-box').css({ background: 'yellow' });
-  //     }
-  //   });
-  // :::::::::::::::::::: TRAVERSING DOM :::::::::::::::::::::::
-  // PARENT: Nos muestra lso PARENTS para el first P
-  //   console.log($('p:first').parent());
-  // CHILDREN: Nos muestra los 3 grandes DIV
-  //   console.log($('div:first').children());
-  //
-  // Modifying:
-  $('.box8').on('click', function () {
-    //     $('div:first').children().css({ color: 'red' });
-    //
-    //
-    // Looping FOREACH:
-    $('p').each(function () {
-      console.log(this);
-      $(this).css({
-        color: 'green',
-      });
-    });
-    $('p').first().css({
-      color: 'red',
-    });
-  });
-});
+//   $('.box7').on('click', function () {
+//  APPEND:
+// $('.result-box').append(`<p>HELLO</p>`);
+// $(`<p>HELLO</p>`).appendTo('.result-box');
+//
+// HTML:
+// console.log($('.box1').html());
+// $('.box1').html(`<div class="active">Hello World</div>`);
+//
+// Text(): "Element: First, Last"
+// console.log($('p:first').text());
+// $('p:first').text(`New TEXT`);
+//
+// BEFORE, AFTER: Inster, After, InsterBefore, InsetAfter
+//
+// REMOVE: Select by Class, or by element and className
+// $('.box1').remove();
+// $('div').remove('.box3');
+//
+// REPLACE: All, With.
+// $('.box1').replaceWith(`<p>Replaced</p>`);
+//
+// ATTRIBUTES : IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// *** ATTR, REMOVEATTR, VAL ***
+// Get ATT:
+// console.log($('.get-att img').attr('alt'));
+//
+// Change ATT:
+// $('.get-att img').attr({ alt: 'New Alt', class: 'changed-alt' });
+//
+// **** VALUE: Get Values form Input Fields! *****
+// console.log($('.get-att input').val());
+//
+// STYLE Properties: Width, InnerWidth, Height, CSS
+//     console.log($('.box1').width());
+//     if ($('.box1').width() > 70) {
+//       $('.result-box').css({ background: 'yellow' });
+//     }
+//   });
+// :::::::::::::::::::: TRAVERSING DOM :::::::::::::::::::::::
+// PARENT: Nos muestra lso PARENTS para el first P
+//   console.log($('p:first').parent());
+// CHILDREN: Nos muestra los 3 grandes DIV
+//   console.log($('div:first').children());
+//
+// Modifying:
+// $('.box8').on('click', function () {
+//   //     $('div:first').children().css({ color: 'red' });
+//   //
+//   //
+//   // Looping FOREACH:
+//   $('p').each(function () {
+//     console.log(this);
+//     $(this).css({
+//       color: 'green',
+//     });
+//   });
+//   $('p').first().css({
+//     color: 'red',
+//   });
+// });
+// });
+
+// :::::::::::::::::::: AJAX :::::::::::::::::::::::
+// $(function () {
+//   $('.ajax-btn').on('click', function () {
+// ------------------- GET -->
+// var request = $.ajax({
+//   url: 'https://jsonplaceholder.typicode.com/posts',
+//   method: 'GET',
+// });
+// request.done(function (data) {
+//   //La Data Recibida, que hacemos?
+//   console.log(data);
+// });
+// request.fail(function (jqHXR, textStatus) {
+//   alert('Request Failed: ' + textStatus);
+// });
+//
+// ----------------- POST -->
+//     var request = $.ajax({
+//       url: 'https://jsonplaceholder.typicode.com/posts',
+//       method: 'POST',
+//       data: {
+//         title: 'A day in the life Of:',
+//         body: 'Hello, testing my POST',
+//         userId: 1,
+//       },
+//     });
+//     request.done(function (data) {
+//       //La Data Recibida, que hacemos?
+//       console.log(data);
+//     });
+//     request.fail(function (jqHXR, textStatus) {
+//       alert('Request Failed: ' + textStatus);
+//     });
+//   });
+//
+// ----------------- PUT -->
+//     var request = $.ajax({
+//       url: 'https://jsonplaceholder.typicode.com/posts/1',
+//       method: 'PUT',
+//       data: {
+//         title: 'Completely Changed',
+//         body: 'Hello, testing my POST',
+//         userId: 1,
+//       },
+//     });
+//     request.done(function (data) {
+//       //La Data Recibida, que hacemos?
+//       console.log(data);
+//     });
+//     request.fail(function (jqHXR, textStatus) {
+//       alert('Request Failed: ' + textStatus);
+//     });
+//   });
+//
+// ----------------- DELETE-->
+//     var request = $.ajax({
+//       url: 'https://jsonplaceholder.typicode.com/posts/1',
+//       method: 'DELETE',
+//     });
+//     request.done(function (data) {
+//       //La Data Recibida, que hacemos?
+//       console.log(data);
+//     });
+//     request.fail(function (jqHXR, textStatus) {
+//       alert('Request Failed: ' + textStatus);
+//     });
+//   });
+// });
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :::::::::::::::::::::::P O K E D E X:::::::::::::::::::::::
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+//
