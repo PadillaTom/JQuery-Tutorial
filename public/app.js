@@ -275,7 +275,7 @@
 //     request.done(function (data) {
 //       //La Data Recibida, que hacemos?
 //       console.log(data);
-//     });
+//     });git
 //     request.fail(function (jqHXR, textStatus) {
 //       alert('Request Failed: ' + textStatus);
 //     });
@@ -288,4 +288,4 @@
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-//
+// URL by NAME: https://pokeapi.co/api/v2/pokemon/pikachu/
